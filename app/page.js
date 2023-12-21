@@ -1,7 +1,11 @@
+import Dashboard from "./dashboard/page";
+
 const Home = () => {
-  return ( 
-   "Landing page"
-   );
-}
- 
+  return (
+    <>
+      <Dashboard />
+    </>
+  );
+};
+
 export default Home;
