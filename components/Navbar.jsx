@@ -19,16 +19,16 @@ const Navbar = () => {
         </a>
         <ul className="hidden lg:flex">
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
-            Home
+            <a href="/">Home</a>
           </li>
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
             Docs
           </li>
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
-            Dashboard
+            <a href="/dashboard">Dashboard</a>
           </li>
           <li className="cursor-pointer relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
-            Deployer
+            <a href="/f0rge20">F0rger</a>
           </li>
         </ul>
         {/* <button className="hidden lg:block bg-[#262626] hover:bg-[#3676E1] px-5 py-2 rounded-[50px] transition ease-in duration-300">

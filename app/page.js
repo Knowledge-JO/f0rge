@@ -1,6 +1,6 @@
 const Home = () => {
   return ( 
-   "Landing page"
+    <p className="text-white">Landing page</p>
    );
 }
  
