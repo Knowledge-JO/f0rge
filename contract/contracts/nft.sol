@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.19;
+pragma solidity >=0.8.0 <=0.8.20;
 
 import {ERC1155} from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
@@ -15,7 +15,7 @@ contract NFT is ERC1155, Ownable {
     mapping(string => uint) public nametoId; //mapping the name to id
     mapping(uint => string) public idToName; // mapping the id ot name
 
-    constructor(string memory _contractName, string memory _uri, string memory _names, uint[] memory _ids) ERC1155(_url) {
+    constructor(string memory _contractName, string memory _uri, string memory _names, uint[] memory _ids) ERC1155(_uri) Ownable(msg.sender) {
         names = _names;
         ids = _ids;
         createMapping();
@@ -46,7 +46,7 @@ contract NFT is ERC1155, Ownable {
     }
 
     function getNames() public view returns(string[] memory) {
-        return names
+        return names;
     }
 
     // change metadata, only owner
