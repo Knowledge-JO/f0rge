@@ -3,7 +3,7 @@ pragma solidity >=0.8.0 <=0.8.20;
 
 import "./token.sol";
 
-contract Starship {
+contract Maker20 {
     event TokenCreated(address indexed tokenAddress, string name, string symbol, uint256 totalSupply);
 
     function createToken(string memory name, string memory symbol, uint256 totalSupply, uint _holdingCap) external {
