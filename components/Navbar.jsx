@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-black h-[70px] text-white flex items-center justify-between px-10 border-b-[1px] border-gray-700 fixed top-0 z-10 w-[100%]">
+      <nav className="bg-black h-[70px] text-white flex items-center justify-between px-10 md:px-[5%] lg:px-[10%] border-b-[1px] border-gray-700 fixed top-0 z-10 w-[100%]">
         <a href="/">
           <img className="w-[150px]" src={logo.src} alt="Logo" />
         </a>
