@@ -1,7 +1,7 @@
 import { useState } from "react";
 import hamburger from "@/public/icon-hamburger.svg";
 import closeIcon from "@/public/icon-close.svg";
-import logo from "@/public/navLogo.webp";
+import logo from "@/public/forge logo.png";
 import { ConnectWallet, darkTheme } from "@thirdweb-dev/react";
 import Image from "next/image";
 const Navbar = () => {

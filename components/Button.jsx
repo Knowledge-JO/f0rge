@@ -15,7 +15,7 @@ const Button = ({ currStep, onNextStep, onPreviousStep }) => {
           onClick={onNextStep}
           className="relative ml-5 bottom-[-15%] bg-[#262626] hover:bg-red-500 px-5 py-2 w-[100px] rounded-lg transition ease-in duration-300"
         >
-          {currStep == 4 ? "Deploy" : "Next"}
+          {currStep == 4 ? "Forge" : "Next"}
         </button>
       )}
     </div>
