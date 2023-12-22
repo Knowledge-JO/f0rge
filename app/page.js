@@ -14,10 +14,10 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Portfolio Tracker for the Arbitrum Blockchain</title>
+        <title>A token deployer for Mode Blockchain</title>
         <meta
-          name="Arbitrum Portfolio Tracker"
-          content="Portfolio Tracker for the Arbitrum Blockchain"
+          name="Mode Token Deployer"
+          content="Token Deployer for the ModeBlockchain"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/f0rges.ico" />
@@ -32,12 +32,13 @@ const Home = () => {
           {/* left item  */}
           <div className="flex flex-col mb-5">
             <h1 className="max-w-md text-3xl text-center md:text-4xl md:text-left text-gray-300 ">
-              An Intuitive token wallet tracker
+              A token and NFT furnance
             </h1>
             <p className="max-w-md text-center md:text-left text-gray-400">
-              Effortlessly oversee your DeFi and NFT portfolios spanning various
-              blockchain networks, granting you a panoramic view of your tokens
-              and entire asset collection through the innovative lens of f0rge.
+            Effortlessly craft your tokens with the F0rge Factory, 
+            spanning various blockchain networks. Gain a comprehensive 
+            overview of your token creations and entire asset collection 
+            through the innovative lens of F0rge.
             </p>
             <div className="">
               <div className="hidden w-fit mt-2 md:block p-3 px-6 pt-2 text-white bg-red-500 rounded-lg baseline">
@@ -65,12 +66,15 @@ const Home = () => {
               About <span className="text-red-500 font-semibold">f0rge</span>
             </h1>
             <p className="max-w-sm text-center md:text-left text-gray-400">
-              f0rge stands as a user-friendly Web3 Portfolio & Token Tracker
-              platform across various Chains, simplifying the management and
-              analysis of your cryptocurrency portfolio. Harnessing the
-              advantages of layer 2 technology, f0rge offers instantaneous
-              analytics, transparent transaction records, and effortless
-              compatibility with Ethereum wallets.
+            F0rge, your user-friendly Web3 Token Creation and Management 
+            platform, extends across diverse blockchain networks. 
+            Streamline the creation and management of tokens with 
+            simplicity, embracing a touch of degen spirit. 
+            Harnessing the power of layer 2 technology, 
+            F0rge ensures a smooth experience, 
+            while Ethereum wallet compatibility adds to the seamless 
+            integration. Dive into the world of decentralized generation 
+            with F0rge.
             </p>
           </div>
 
@@ -88,11 +92,15 @@ const Home = () => {
               <span className="text-red-500 font-semibold">f0rge</span>
             </h2>
             <p className="max-w-sm text-start text-gray-400">
-              f0rge streamlines portfolio management within the ever-evolving
-              realm of DeFi and blockchain technology. It presents a
-              comprehensive Web3 Portfolio & Token Tracker across various
-              chains, providing users with a seamless and efficient way to
-              monitor and oversee their digital assets.
+            F0rge, your ultimate token deployer, 
+            simplifies the creation and management of 
+            tokens in the ever-evolving DeFi and blockchain landscape. 
+            With our platform, deploying tokens across various chains 
+            becomes an effortless endeavor. F0rge stands as your go-to 
+            solution for seamless Web3 token deployment, 
+            providing a user-friendly experience for crafting and managing tokens. 
+            Dive into the decentralized world with F0rge, 
+            where token deployment meets simplicity.
             </p>
           </div>
           <div className="flex flex-col space-y-8 md:w-1/2">
@@ -105,17 +113,16 @@ const Home = () => {
                     01
                   </div>
                   <h3 className="text-base font-bold md:mb-4 md:hidden text-gray-400">
-                    Portfolio Management
+                  Token Deployer
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block ">
-                  Portfolio Management
+                  Token Deployer
                 </h3>
                 <p className="text-gray-400">
-                  Connect your Ethereum wallet to track assets across various
-                  DeFi protocols and tokens on the various chains.
+                  Connect your Mode wallet to deploy your token on Mode chain.
                 </p>
               </div>
             </div>
@@ -129,17 +136,16 @@ const Home = () => {
                     02
                   </div>
                   <h3 className="text-base font-bold md:mb-4 md:hidden text-gray-400">
-                    Real-time Analytics
+                    Anti-Bot Functions
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block ">
-                  Real-time Analytics
+                 Team Allocation 
                 </h3>
                 <p className="text-gray-400">
-                  Get live updates on portfolio value, ROI, and asset allocation
-                  for informed decision-making
+                  Fill in Token Information
                 </p>
               </div>
             </div>
@@ -162,7 +168,7 @@ const Home = () => {
                   Transaction History
                 </h3>
                 <p className="text-gray-400">
-                  Easily review and verify all your transactions for
+                  Choose from the optional functions ranging from anti-bot, team allocation, etc.Easily review and verify all your transactions for
                   transparency and security.
                 </p>
               </div>
@@ -186,8 +192,7 @@ const Home = () => {
                   Different Chain Integration
                 </h3>
                 <p className="text-gray-400">
-                  Enjoy fast and cost-effective transactions, thanks to layer 2
-                  solutions
+                  Enjoy fast and easy token deployment
                 </p>
               </div>
             </div>
