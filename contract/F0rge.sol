@@ -69,7 +69,5 @@ contract F0rge {
     function getNFTbyIndexandId(uint _index, uint _id) public view returns (address _contract, address _owner, string memory _uri, uint supply) {
        NFT nft = tokens[_index];
         return(address(nft), nft.owner(), nft.uri(_id), nft.balanceOf(indexToOwner[_index], _id));
-    }
-
-    
+    }    
 }
