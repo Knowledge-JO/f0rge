@@ -16,6 +16,8 @@ const initialState = {
   sliderState4: false,
   buyTaxSlide: false,
   sellTaxSlide: false,
+  tokenName: "",
+  
 };
 
 const reducer = (state, action) => {
