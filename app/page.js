@@ -22,8 +22,8 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/f0rges.ico" />
       </Head>
-      <nav className="">
-        <Navbar />
+      <nav>
+        
       </nav>
 
       {/* Hero Section  */}
