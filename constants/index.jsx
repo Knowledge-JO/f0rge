@@ -18,6 +18,18 @@ const formInputs = [
     isRequired: true,
   },
   {
+    label: "Holding Cap",
+    id: "holdingCap",
+    placeholder: " holding cap",
+    isRequired: true,
+  },
+  {
+    label: "Mode Address",
+    id: "modeadd",
+    placeholder: "Mode Address",
+    isRequired: true
+  },
+  {
     label: "Telegram",
     id: "telegram",
     placeholder: "telegram group link",

@@ -3,6 +3,7 @@
 import InputSlider from "../InputSlider";
 import InputFeature from "../InputFeature";
 
+
 const Form3 = ({ state, dispatch }) => {
   return (
     <div className="text-white px-10 md:px-[100px] mt-[30px]">

@@ -1,4 +1,5 @@
 import { formInputs } from "../../constants";
+import { handleInputChange } from "../Form"
 
 const Form1 = () => {
   return (
@@ -13,6 +14,7 @@ const Form1 = () => {
             id={formInput.id}
             placeholder={formInput.placeholder}
             isRequired={formInput.isRequired}
+            
           />
         ))}
 
@@ -53,6 +55,7 @@ const InputForm1 = ({ label, id, placeholder, isRequired }) => {
         id={id}
         placeholder={placeholder}
         className="bg-[#262626] h-[40px] w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1]"
+        onChange={handleInputChange}
       />
     </div>
   );

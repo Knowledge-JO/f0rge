@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
-import "./Token.sol";
+import "./token.sol";
 import "./nft.sol";
 
 
