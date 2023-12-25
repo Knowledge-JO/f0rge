@@ -2,7 +2,6 @@
 import InputFeature from "../InputFeature";
 import InputSlider from "../InputSlider";
 import InputAddress from "../InputAddress";
-import { handleInputChange } from "../Form"
 
 const Form4 = ({ state, dispatch }) => {
   return (
