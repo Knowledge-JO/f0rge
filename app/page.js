@@ -26,7 +26,7 @@ const Home = () => {
 
       {/* Hero Section  */}
       <section className="">
-        <div className="flex flex-col-reverse md:flex-row md:justify-between items-center px-10 md:px-[5%] lg:px-[10%] mt-[100px] mb-10">
+        <div className="flex flex-col-reverse md:flex-row md:justify-between items-center px-10 md:px-[5%] lg:px-[10%] mb-10">
           {/* left item  */}
           <div className="flex flex-col mb-5">
             <h1 className="max-w-md text-3xl text-center md:text-4xl md:text-left text-gray-300 ">
@@ -38,8 +38,8 @@ const Home = () => {
             overview of your token creations and entire asset collection 
             through the innovative lens of F0rge.
             </p>
-            <div className="">
-              <div className="hidden w-fit mt-2 md:block p-3 px-6 pt-2 text-white bg-red-500 rounded-lg baseline">
+            <div className="flex justify-center md:block">
+              <div className="w-fit mt-2 md:block p-3 px-6 pt-2 text-white bg-red-500 rounded-lg baseline">
                 <Link href="/f0rge20">Launch Dapp</Link>
               </div>
             </div>

@@ -1,51 +1,45 @@
 const formInputs = [
   {
     label: "Token Name",
-    id: "name",
+    id: "tokenName",
     placeholder: "token name",
     isRequired: true,
+    inputType: "text"
   },
   {
     label: "Token Symbol",
-    id: "symbol",
+    id: "tokenSymbol",
     placeholder: "token symbol",
     isRequired: true,
+    inputType: "text"
   },
   {
     label: "Total Supply",
-    id: "supply",
+    id: "totalSupply",
     placeholder: "total supply",
     isRequired: true,
-  },
-  {
-    label: "Holding Cap",
-    id: "holdingCap",
-    placeholder: " holding cap",
-    isRequired: true,
-  },
-  {
-    label: "Mode Address",
-    id: "modeadd",
-    placeholder: "Mode Address",
-    isRequired: true
+    inputType: "number"
   },
   {
     label: "Telegram",
-    id: "telegram",
+    id: "telegramLink",
     placeholder: "telegram group link",
     isRequired: true,
+    inputType: "text"
   },
   {
     label: "Twitter",
-    id: "twitter",
+    id: "twitterLink",
     placeholder: "twitter.com/accountusername",
     isRequired: false,
+    inputType: "text"
   },
   {
     label: "Website",
-    id: "website",
+    id: "websiteLink",
     placeholder: "website URL",
     isRequired: false,
+    inputType: "text"
   },
 ];
 

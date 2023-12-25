@@ -1,7 +1,7 @@
 import { formInputs } from "../../constants";
 import { handleInputChange } from "../Form"
 
-const Form1 = () => {
+const Form1 = ({state, dispatch}) => {
   return (
     <div className="text-white px-10 md:px-[100px]  mt-[30px]">
       <h1 className="font-bold text-[30px] text-center mb-10">Coin Setup</h1>
@@ -14,7 +14,10 @@ const Form1 = () => {
             id={formInput.id}
             placeholder={formInput.placeholder}
             isRequired={formInput.isRequired}
-            
+            type = {formInput.id}
+            inputType = {formInput.inputType}
+            state = {state}
+            dispatch = {dispatch}
           />
         ))}
 
@@ -22,18 +25,14 @@ const Form1 = () => {
           <label htmlFor="description" className="block text-sm mb-1">
             Description <span className="text-red-700 ">*</span>
           </label>
-          {/* <text
-            type="text"
-            id="description"
-            placeholder="describe your project to your audience"
-            className="bg-[#262626] h-[100px]  w-[100%]  rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1] "
-          /> */}
           <textarea
             id="description"
             cols="30"
             rows="5"
             placeholder="describe your project to your audience"
             className="bg-[#262626] py-3  w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1] "
+            value={state.description}
+            onChange={e => dispatch({type: "description", payload: e.target.value})}
           ></textarea>
         </div>
       </div>
@@ -44,18 +43,19 @@ const Form1 = () => {
 export default Form1;
 
 // eslint-disable-next-line react/prop-types
-const InputForm1 = ({ label, id, placeholder, isRequired }) => {
+const InputForm1 = ({ inputType="text", label, id, placeholder, isRequired, type, state, dispatch }) => {
   return (
     <div className=" w-[100%]">
       <label htmlFor={id} className="block text-sm mb-1">
         {label} {isRequired && <span className="text-red-700 ">*</span>}
       </label>
       <input
-        type="text"
+        type={inputType}
         id={id}
         placeholder={placeholder}
         className="bg-[#262626] h-[40px] w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1]"
-        onChange={handleInputChange}
+        value={state[type]}
+        onChange={e => dispatch({type, payload: e.target.value})}
       />
     </div>
   );
