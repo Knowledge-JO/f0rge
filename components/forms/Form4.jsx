@@ -20,10 +20,13 @@ const Form4 = ({ state, dispatch }) => {
             <InputFeature
               feature={"Buy Tax"}
               label={"Tax taken for token buy"}
-              state={state.buyTaxSlide}
+              slider={state.buyTaxSlide}
+              state={state.buyTax}
+              dispatch={dispatch}
+              type="buyTax"
             >
               <InputSlider
-                state={state.buyTaxSlide}
+                slider={state.buyTaxSlide}
                 dispatch={dispatch}
                 type="buyTaxSlide"
               />
@@ -31,17 +34,23 @@ const Form4 = ({ state, dispatch }) => {
             <InputFeature
               feature={"Sell Tax"}
               label={"Tax taken for token sell"}
-              state={state.sellTaxSlide}
+              slider={state.sellTaxSlide}
+              state={state.sellTax}
+              dispatch={dispatch}
+              type="sellTax"
             >
               <InputSlider
-                state={state.sellTaxSlide}
+                slider={state.sellTaxSlide}
                 dispatch={dispatch}
                 type="sellTaxSlide"
               />
             </InputFeature>
             <InputAddress
               label={"Tax Payout Address"}
-              state={state.sellTaxSlide || state.buyTaxSlide}
+              slider={state.sellTaxSlide || state.buyTaxSlide}
+              state={state.taxPayoutAddress}
+              dispatch={dispatch}
+              type="taxPayoutAddress"
             />
           </div>
         </div>

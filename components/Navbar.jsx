@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       <nav className="bg-black h-[70px] text-white flex items-center justify-between px-10 md:px-[5%] lg:px-[10%] border-b-[1px] border-gray-700 fixed top-0 z-10 w-[100%]">
         <a href="/">
-          <img className="w-[150px]" src={logo.src} alt="Logo" />
+          <img className="w-[100px]" src={logo.src} alt="Logo" />
         </a>
         <ul className="hidden lg:flex">
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">

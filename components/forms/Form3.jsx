@@ -22,10 +22,13 @@ const Form3 = ({ state, dispatch }) => {
             <InputFeature
               feature={"Limit per wallet"}
               label={"Max tokens per wallet"}
-              state={state.sliderState1}
+              slider={state.sliderState1}
+              state={state.limitPerWallet}
+              dispatch={dispatch}
+              type="limitPerWallet"
             >
               <InputSlider
-                state={state.sliderState1}
+                slider={state.sliderState1}
                 dispatch={dispatch}
                 type="slider1"
               />
@@ -33,20 +36,23 @@ const Form3 = ({ state, dispatch }) => {
             <InputFeature
               feature={"Max per transaction"}
               label={"Max tokens per trade"}
-              state={state.sliderState2}
+              slider={state.sliderState2}
+              state = {state.maxPerTx}
+              dispatch={dispatch}
+              type="maxPerTx"
             >
               <InputSlider
-                state={state.sliderState2}
+                slider={state.sliderState2}
                 dispatch={dispatch}
                 type="slider2"
               />
             </InputFeature>
             <SniperAutoBurnFeature
               feature={"Sniper auto-burn"}
-              state={state.sliderState3}
+              slider={state.sliderState3}
             >
               <InputSlider
-                state={state.sliderState3}
+                slider={state.sliderState3}
                 dispatch={dispatch}
                 type="slider3"
               />
@@ -59,7 +65,7 @@ const Form3 = ({ state, dispatch }) => {
 };
 
 // eslint-disable-next-line react/prop-types
-const SniperAutoBurnFeature = ({ feature, state, children }) => {
+const SniperAutoBurnFeature = ({ feature, slider, children }) => {
   return (
     <div className="border-2 border-white/40 md:border-2  mb-3 rounded-lg w-full min-[600px]:w-[500px] px-4 min-[400px]:px-8 py-3 text-[12px] md:text-base">
       <div className="flex justify-between items-center">
@@ -68,10 +74,10 @@ const SniperAutoBurnFeature = ({ feature, state, children }) => {
       </div>
       <div
         className={`${
-          state ? "h-auto" : "h-0"
+          slider ? "h-auto" : "h-0"
         } transition-height duration-300 mt-3 mb-3`}
       >
-        <p className={`${state ? "block" : "hidden"}`}>
+        <p className={`${slider ? "block" : "hidden"}`}>
           Sniper auto-burn is enabled and will add an additional 20% tax on buys
           in the first block, reducing to 13.33% in the second block, 6.66% in
           the third, and finally 0% from the fourth block on. The proceeds from

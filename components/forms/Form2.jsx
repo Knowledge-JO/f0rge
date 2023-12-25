@@ -20,17 +20,23 @@ const Form2 = ({ state, dispatch }) => {
             <InputFeature
               feature={"Team Allocation"}
               label={"Amount of tokens for team"}
-              state={state.sliderState4}
+              slider = {state.sliderState4}
+              state={state.teamAllocation}
+              dispatch = {dispatch}
+              type = "teamAllocation"
             >
               <InputSlider
-                state={state.sliderState4}
+                slider = {state.sliderState4}
                 dispatch={dispatch}
                 type="slider4"
               />
             </InputFeature>
             <InputAddress
               label={"Team's payout address"}
-              state={state.sliderState4}
+              slider = {state.sliderState4}
+              state = {state.teamPayoutAddress}
+              dispatch = {dispatch}
+              type = "teamPayoutAddress"
             />
           </div>
         </div>

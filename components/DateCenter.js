@@ -22,7 +22,7 @@ const initialState = {
     buyTax: 0,
     sellTax: 0,
     teamPayoutAddress: "",
-    taxPayOutAddress: ""
+    taxPayoutAddress: ""
   };
   
 const reducer = (state, action) => {
@@ -65,8 +65,8 @@ const reducer = (state, action) => {
             return {...state, sellTax: action.payload}
         case "teamPayoutAddress":
             return {...state, teamPayoutAddress: action.payload}
-        case "taxPayOutAddress":
-            return {...state, taxPayOutAddress: action.payload}
+        case "taxPayoutAddress":
+            return {...state, taxPayoutAddress: action.payload}
         default:
             return initialState;
     }

@@ -3,6 +3,7 @@
 const InputSlider = ({
   first = "OFF",
   second = "ON",
+  slider,
   state,
   dispatch,
   type,
@@ -13,8 +14,8 @@ const InputSlider = ({
         <input
           type="checkbox"
           className="peer w-0 h-0 opacity-0"
-          value={state}
-          checked={state}
+          value={slider}
+          checked={slider}
           onChange={() => dispatch({ type })}
         />
         <span className="absolute inset-x-0 inset-y-0 cursor-pointer bg-black rounded-lg transition before:transition before:rounded-lg before:content-[''] before:absolute before:h-full before:w-8 before:left-0  before:duration-400 before:bg-red-500 peer-checked:before:translate-x-[38px]  flex justify-around items-center">
