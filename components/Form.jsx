@@ -6,12 +6,36 @@ import Form4 from "./forms/Form4";
 import Button from "./Button";
 import { useReducer, useState } from "react";
 // import Success from "./forms/Success";
-import { initialState, reducer } from "./DateCenter";
+import { initialState, reducer } from "./DataCenter";
+import { useAddress, useContract, useContractWrite  } from "@thirdweb-dev/react";
+import {contractAddress, contractABI } from "@/constants";
+
+
+// function args 
+// string memory name,
+// string memory symbol,
+//uint256 _totalSupply,
+//uint _holdingCap,
+//uint256 _buyTax,
+//uint256 _sellTax,
+//uint8 _tokenDecimals,
+//address _ownerAddress,
+//uint256 teamAllocation,
+//address teamAllocationAddress,
+//address _modeAddress
 
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const totalSteps = 4;
   const [currStep, setCurrStep] = useState(1);
+  const address = useAddress()
+  const {contract} = useContract(contractAddress, contractABI)
+
+  // remove mode address and set input for decimals 
+  const decimals = 18
+  const modeAddress = address
+
+  const {mutateAsync, isLoading, error} = useContractWrite (contract, "createToken")
   
   const handelNextStep = () => {
     if (currStep < totalSteps) setCurrStep((currStep) => currStep + 1);
@@ -20,6 +44,24 @@ const Form = () => {
   const handlePreviousStep = () => {
     if (currStep > 1) setCurrStep((currStep) => currStep - 1);
   };
+
+  const handleCreateToken = () => {
+    mutateAsync({
+      args: [
+        initialState.tokenName, 
+        initialState.tokenSymbol, 
+        initialState.totalSupply, 
+        initialState.limitPerWallet, 
+        initialState.buyTax,
+        initialState.sellTax,
+        decimals,
+        address,
+        initialState.teamAllocation,
+        initialState.teamPayoutAddress,
+        modeAddress
+      ]
+    })
+  }
 
   return (
     <div className="mb-10">
@@ -33,6 +75,7 @@ const Form = () => {
         onNextStep={handelNextStep}
         onPreviousStep={handlePreviousStep}
         currStep={currStep}
+        onHandleCreateToken = {handleCreateToken}
       />
     </div>
   );
