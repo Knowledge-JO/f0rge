@@ -20,7 +20,7 @@ const Review = ({state}) => {
                             <div className="text-sm">
                                 <p><span className="font-bold text-white/50">Token Name</span> - {state.tokenName} </p>
                                 <p><span className="font-bold text-white/50">Ticker</span> - {state.tokenSymbol} </p>
-                                <p><span className="font-bold text-white/50">Total supply</span> - {state.totalSupply} $MYT</p>
+                                <p><span className="font-bold text-white/50">Total supply</span> - {state.totalSupply} ${state.tokenSymbol}</p>
                             </div>
                         </div>
                     </div>
