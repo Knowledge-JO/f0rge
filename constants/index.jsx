@@ -43,7 +43,6 @@ const formInputs = [
   },
 ];
 
-
 const contractAddress = "0x44d03AD4c06ab3fCE68FF2552F18f9fd604Ec68e"
 
 const contractABI = [

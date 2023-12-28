@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 const InputFeature = ({ feature, label, slider, state, dispatch, type, children }) => {
   return (
-    <div className="border-2 border-white/40 md:border-2  mb-3 rounded-lg w-full min-[600px]:w-[500px] px-4 min-[400px]:px-8 py-3 text-[12px]">
+    <div className="border-2 border-white/40 mb-3 rounded-lg w-full min-[600px]:w-[500px] px-4 min-[400px]:px-8 py-3 text-[12px]">
       <div className="flex justify-between items-center">
         <p className="text-base">{feature}</p>
         {children}

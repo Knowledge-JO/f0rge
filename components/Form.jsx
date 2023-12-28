@@ -9,7 +9,7 @@ import { useReducer, useState } from "react";
 import { initialState, reducer } from "./DataCenter";
 import { useAddress, useContract, useContractWrite  } from "@thirdweb-dev/react";
 import {contractAddress, contractABI } from "@/constants";
-
+import Review from "./forms/Review";
 
 // function args 
 // string memory name,
@@ -26,7 +26,7 @@ import {contractAddress, contractABI } from "@/constants";
 
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const totalSteps = 4;
+  const totalSteps = 5;
   const [currStep, setCurrStep] = useState(1);
   const address = useAddress()
   const {contract} = useContract(contractAddress, contractABI)
@@ -70,7 +70,7 @@ const Form = () => {
       {currStep == 2 && <Form2 state={state} dispatch={dispatch} />}
       {currStep == 3 && <Form3 state={state} dispatch={dispatch} />}
       {currStep == 4 && <Form4 state={state} dispatch={dispatch} />}
-      {/* {currStep == 5 && <Success />} */}
+      {currStep == 5 && <Review state={state} />}
       <Button
         onNextStep={handelNextStep}
         onPreviousStep={handlePreviousStep}

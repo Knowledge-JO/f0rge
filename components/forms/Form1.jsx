@@ -53,7 +53,7 @@ const InputForm1 = ({ inputType="text", label, id, placeholder, isRequired, type
         type={inputType}
         id={id}
         placeholder={placeholder}
-        className="bg-[#262626] h-[40px] w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1]"
+        className="bg-[#262626] h-[40px] w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-red-500"
         value={state[type]}
         onChange={e => dispatch({type, payload: e.target.value})}
       />
