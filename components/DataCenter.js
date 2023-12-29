@@ -28,17 +28,17 @@ const initialState = {
 const reducer = (state, action) => {
     switch (action.type) {
         case "slider1":
-            return { ...state, sliderState1: !state.sliderState1 };
+            return { ...state, sliderState1: !state.sliderState1 }
         case "slider2":
-            return { ...state, sliderState2: !state.sliderState2 };
+            return { ...state, sliderState2: !state.sliderState2 }
         case "slider3":
-            return { ...state, sliderState3: !state.sliderState3 };
+            return { ...state, sliderState3: !state.sliderState3 }
         case "slider4":
-            return { ...state, sliderState4: !state.sliderState4 };
+            return { ...state, sliderState4: !state.sliderState4 }
         case "buyTaxSlide":
-            return { ...state, buyTaxSlide: !state.buyTaxSlide };
+            return { ...state, buyTaxSlide: !state.buyTaxSlide }
         case "sellTaxSlide":
-            return { ...state, sellTaxSlide: !state.sellTaxSlide };
+            return { ...state, sellTaxSlide: !state.sellTaxSlide }
         case "tokenName":
             return {...state, tokenName: action.payload}
         case "tokenSymbol":

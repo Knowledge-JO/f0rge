@@ -30,7 +30,7 @@ const Form1 = ({state, dispatch}) => {
             cols="30"
             rows="5"
             placeholder="describe your project to your audience"
-            className="bg-[#262626] py-3  w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-[#3676E1] "
+            className="bg-[#262626] py-3  w-[100%] rounded-md px-3 ring-1 ring-gray-700 focus:outline focus:outline-red-500"
             value={state.description}
             onChange={e => dispatch({type: "description", payload: e.target.value})}
           ></textarea>
