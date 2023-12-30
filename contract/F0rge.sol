@@ -29,10 +29,9 @@ contract F0rge {
         uint8 _tokenDecimals,
         address _ownerAddress,
         uint256 teamAllocation,
-        address teamAllocationAddress,
-        address _modeAddress
+        address teamAllocationAddress
     ) external {
-        Token newToken = new Token(name, symbol, _totalSupply, _holdingCap, _buyTax, _sellTax, _tokenDecimals, _ownerAddress, _modeAddress);
+        Token newToken = new Token(name, symbol, _totalSupply, _holdingCap, _buyTax, _sellTax, _tokenDecimals, _ownerAddress);
         uint256 totalSupply = _totalSupply * 10 ** _tokenDecimals;
         uint256 teamShare = totalSupply * teamAllocation / 100;
         // transfer to team wallet

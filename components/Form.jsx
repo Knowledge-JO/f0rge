@@ -28,13 +28,14 @@ const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const totalSteps = 5;
   const [currStep, setCurrStep] = useState(1);
-  const address = useAddress()
+  const address = useAddress();
   const {contract} = useContract(contractAddress, contractABI)
 
   // remove mode address and set input for decimals 
   const decimals = 18
-  const modeAddress = address
+  
 
+  console.log(address)
   const {mutateAsync, isLoading, error} = useContractWrite (contract, "createToken")
   
   const handelNextStep = () => {
@@ -57,8 +58,7 @@ const Form = () => {
         decimals,
         address,
         initialState.teamAllocation,
-        initialState.teamPayoutAddress,
-        modeAddress
+        initialState.teamPayoutAddress | null
       ]
     })
   }
