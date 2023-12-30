@@ -1,7 +1,7 @@
 
 
 // create useReducer hook here to manage state for the entire form so as to prevent clearing of state when a form component is unmounted.
-
+//0x0000000000000000000000000000000000000000
 const initialState = {
     sliderState1: false,
     sliderState2: false,
@@ -64,6 +64,7 @@ const reducer = (state, action) => {
         case "sellTax":
             return {...state, sellTax: action.payload}
         case "teamPayoutAddress":
+            console.log(action.payload)
             return {...state, teamPayoutAddress: action.payload}
         case "taxPayoutAddress":
             return {...state, taxPayoutAddress: action.payload}
