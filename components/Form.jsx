@@ -22,7 +22,6 @@ import Review from "./forms/Review";
 //address _ownerAddress,
 //uint256 teamAllocation,
 //address teamAllocationAddress,
-//address _modeAddress
 
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -33,7 +32,6 @@ const Form = () => {
 
   // remove mode address and set input for decimals 
   const decimals = 18
-  const modeAddress = address
 
   const {mutateAsync, isLoading, error} = useContractWrite (contract, "createToken")
   
@@ -46,19 +44,19 @@ const Form = () => {
   };
 
   const handleCreateToken = () => {
+    console.log(state)
     mutateAsync({
       args: [
-        initialState.tokenName, 
-        initialState.tokenSymbol, 
-        initialState.totalSupply, 
-        initialState.limitPerWallet, 
-        initialState.buyTax,
-        initialState.sellTax,
+        state.tokenName, 
+        state.tokenSymbol, 
+        state.totalSupply, 
+        state.limitPerWallet, 
+        state.buyTax,
+        state.sellTax,
         decimals,
         address,
-        initialState.teamAllocation,
-        initialState.teamPayoutAddress,
-        modeAddress
+        state.teamAllocation,
+        state.teamPayoutAddress
       ]
     })
   }
