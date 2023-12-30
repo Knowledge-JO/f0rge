@@ -4,9 +4,13 @@ import { ThirdwebProvider } from "@/components/ThirdwebProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 export const metadata = {
   title: "F0RGE",
-  description: "Launchpad for Mode blockchain",
+  description: "Launchpad for fonsmartchain",
 };
 
 export default function RootLayout({ children }) {
@@ -38,6 +42,7 @@ export default function RootLayout({ children }) {
         >
           {children}
         </ThirdwebProvider>
+        <ToastContainer />
       </body>
     </html>
   );

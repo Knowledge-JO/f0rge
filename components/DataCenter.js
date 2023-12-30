@@ -21,8 +21,8 @@ const initialState = {
     maxPerTx: 0,
     buyTax: 0,
     sellTax: 0,
-    teamPayoutAddress: "",
-    taxPayoutAddress: ""
+    teamPayoutAddress: "0x0000000000000000000000000000000000000000",
+    taxPayoutAddress: "0x0000000000000000000000000000000000000000"
   };
   
 const reducer = (state, action) => {

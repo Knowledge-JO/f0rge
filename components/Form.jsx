@@ -10,6 +10,7 @@ import { initialState, reducer } from "./DataCenter";
 import { useAddress, useContract, useContractWrite  } from "@thirdweb-dev/react";
 import {contractAddress, contractABI } from "@/constants";
 import Review from "./forms/Review";
+import { toast } from "react-toastify";
 
 // function args 
 // string memory name,
@@ -32,12 +33,6 @@ const Form = () => {
 
   // remove mode address and set input for decimals 
   const decimals = 18
-<<<<<<< HEAD
-  
-=======
->>>>>>> 52d121daa847d0e111715c3a136b863dce6fb793
-
-  console.log(address)
   const {mutateAsync, isLoading, error} = useContractWrite (contract, "createToken")
   
   const handelNextStep = () => {
@@ -48,27 +43,28 @@ const Form = () => {
     if (currStep > 1) setCurrStep((currStep) => currStep - 1);
   };
 
-  const handleCreateToken = () => {
-    console.log(state)
-    mutateAsync({
-      args: [
-        state.tokenName, 
-        state.tokenSymbol, 
-        state.totalSupply, 
-        state.limitPerWallet, 
-        state.buyTax,
-        state.sellTax,
-        decimals,
-        address,
-<<<<<<< HEAD
-        initialState.teamAllocation,
-        initialState.teamPayoutAddress | null
-=======
-        state.teamAllocation,
-        state.teamPayoutAddress
->>>>>>> 52d121daa847d0e111715c3a136b863dce6fb793
-      ]
-    })
+  const handleCreateToken = async () => {
+    if(!address) return toast.error("please connect your wallet")
+    try{
+      await mutateAsync({
+        args: [
+          state.tokenName, 
+          state.tokenSymbol, 
+          state.totalSupply, 
+          state.limitPerWallet, 
+          state.buyTax,
+          state.sellTax,
+          decimals,
+          address,
+          state.teamAllocation,
+          state.teamPayoutAddress
+        ]
+      })
+      toast.error("Token created succesfully")
+    }catch(err){
+      toast.error(err.message)
+    }
+    
   }
 
   return (
@@ -84,6 +80,7 @@ const Form = () => {
         onPreviousStep={handlePreviousStep}
         currStep={currStep}
         onHandleCreateToken = {handleCreateToken}
+        isLoading = {isLoading}
       />
     </div>
   );
