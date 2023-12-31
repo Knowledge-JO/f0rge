@@ -21,9 +21,11 @@ const Navbar = () => {
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
             <a href="/">Home</a>
           </li>
-          <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
+          <a href="https://arkade-base.gitbook.io/docsforge/">
+            <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
             Docs
           </li>
+          </a>
           <li className="cursor-pointer mr-[50px] relative before:content-[''] before:absolute before:bottom-0 before:w-[0%] before:h-[2px] before:bg-red-500 hover:before:w-[100%] before:transition-width before:duration-500">
             <a href="/dashboard">Dashboard</a>
           </li>

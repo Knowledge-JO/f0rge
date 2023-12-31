@@ -60,7 +60,7 @@ const Form = () => {
           state.teamPayoutAddress
         ]
       })
-      toast.error("Token created succesfully")
+      toast.success("Token created succesfully")
     }catch(err){
       toast.error(err.message)
     }
