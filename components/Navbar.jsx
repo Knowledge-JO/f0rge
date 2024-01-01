@@ -38,7 +38,8 @@ const Navbar = () => {
         </button> */}
         <div className="hidden lg:block">
           <ConnectWallet
-            modalSize="compact"
+            switchToActiveChain={true}
+            modalSize="compact
             theme={darkTheme({
               colors: { primaryButtonBg: "#262626", primaryButtonText: "#fff" },
             })}
